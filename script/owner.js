@@ -17,11 +17,11 @@ module.exports.config = {
 module.exports.run = async ({ api, event }) => {
 	try {
 		const ownerInfo = {
-			name: `KYSLER SANJIRO`,
-			gender: 'MALE',
-			age: '19',
+			name: `Yhana alvarez`,
+			gender: 'FEMALE',
+			age: '17',
 			height: '69',
-			facebookLink: `https://www.facebook.com/61554265433272`,
+			facebookLink: `https://www.facebook.com/Yhana.alvarez.445`,
 			status: 'GUTOM'
 		};
 
