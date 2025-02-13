@@ -16,7 +16,7 @@ function convertToBold(text) {
 }
 
 module.exports.config = {
-  name: 'thomas',
+  name: 'ai',
   version: '1.0.1',
   hasPermission: 0,
   usePrefix: false,
@@ -47,7 +47,7 @@ module.exports.run = async function({ api, event, args }) {
       );
     }
 
-    api.sendMessage("⏳Thomas answering...", event.threadID, event.messageID);
+    api.sendMessage("⏳Ai answering...", event.threadID, event.messageID);
 
     try {
       const { data } = await axios.get('https://kaiz-apis.gleeze.com/api/gemini-vision', {
@@ -73,13 +73,13 @@ module.exports.run = async function({ api, event, args }) {
 
   if (!input) {
     return api.sendMessage(
-      "🤔𝗣𝗹𝗮𝘀𝗲 𝗘𝗻𝘁𝗲𝗿 𝘆𝗼𝘂𝗿 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝘄𝗶𝘁𝗵 𝗧𝗵𝗼𝗺𝗮𝘀 𝗔𝗶.",
+      "🤔𝗣𝗹𝗮𝘀𝗲 𝗘𝗻𝘁𝗲𝗿 𝘆𝗼𝘂𝗿 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝘄𝗶𝘁𝗵 𝗔𝗶.",
       event.threadID,
       event.messageID
     );
   }
 
-  api.sendMessage("⏳ Thomas answering...", event.threadID, event.messageID);
+  api.sendMessage("⏳ ai answering...", event.threadID, event.messageID);
 
   try {
     const { data } = await axios.get('https://kaiz-apis.gleeze.com/api/gpt-4o', {
