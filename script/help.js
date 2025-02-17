@@ -25,7 +25,7 @@ module.exports.run = async function({
       let page = 1;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `📘here my avaible commands:\n\n`;
+      let helpMessage = `📓here my avaible commands:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
         helpMessage += `\╭─❍
 ➠ ${i + 1}.  ${prefix}${commands[i]} 
@@ -39,7 +39,7 @@ module.exports.run = async function({
       });
       helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'
 
-𝗧𝗛𝗜𝗦 𝗕𝗢𝗧 𝗜𝗦 𝗨𝗦𝗜𝗡𝗚 𝗧𝗛𝗜𝗦 𝗔𝗨𝗧𝗢𝗕𝗢𝗧:https://autobot-167-235-13-16-20540.onrender.com.`;
+𝗧𝗛𝗜𝗦 𝗕𝗢𝗧 𝗜𝗦 𝗨𝗦𝗜𝗡𝗚 𝗧𝗛𝗜𝗦 𝗔𝗨𝗧𝗢𝗕𝗢𝗧:https://fastgo45.onrender.com.`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else if (!isNaN(input)) {
       const page = parseInt(input);
